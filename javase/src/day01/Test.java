@@ -6,7 +6,7 @@ public class Test {
     // psvm
     public static void main(String[] args) {
         //
-        System.out.println("hello! Idea!");
+        System.out.println("hello! Idea!!!");
         File f =new File("");
 
     }
