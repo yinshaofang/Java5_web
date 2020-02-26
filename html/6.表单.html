@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <!--
+      表单：采集用户提交的数据，提交给后台程序处理
+      标签：form
+      子标签：fieldset input  select  textarea button
+      属性：action method target
+  -->
+    <form action="2.图像标签.html" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>用户信息填写</legend>
+            <label for="userid">编号：</label>
+            <input type="hidden" id="userid" name="uid"><br>
+            <label for="username">姓名:</label>
+            <input type="text" id="username" name="uname" size="30" placeholder="请输入用户名" maxlength="6"><br>
+            <label>照片：</label>
+            <input type="image" name="img" src="img/jj.jpg"><br>
+            <label for="usersex">性别:</label>
+            <input type="radio" id="usersex" name="sex" checked value="man">男 &nbsp;&nbsp;
+            <input type="radio" id="usersex1" name="sex">女<br>
+            <label for="hobbies">爱好:</label>
+            <input type="checkbox" id="hobbies" name="book" checked>看书&nbsp;&nbsp;
+            <input type="checkbox" id="hobbies1" name="film">看电影&nbsp;&nbsp;
+            <input type="checkbox" id="hobbies2" name="music">听音乐&nbsp;&nbsp;
+            <input type="checkbox" id="hobbies3" name="sing">唱歌&nbsp;&nbsp;<br>
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="pwd" required maxlength="6"><br>
+            <label>地址：</label>
+            <select name="sheng">
+               <optgroup label="华东地区">
+                <option selected value="1">江苏</option>
+                <option value="2">安徽</option>
+                <option value="3">浙江</option>
+                <option value="4">山东</option>
+                <option value="5">福建</option>
+               </optgroup>
+            </select>省
+            <select size="5" name="city">
+                <optgroup label="省会城市">
+                    <option selected>南京</option>
+                    <option>合肥</option>
+                    <option>杭州</option>
+                    <option>济南</option>
+                    <option>福州</option>
+                </optgroup>
+            </select>市<br>
+            <label for="myfile">上传：</label>
+            <input type="file" id="myfile" name="files"> &nbsp;
+            <input type="button" value="上传文件"><br>
+            <label>评价：</label>
+            <textarea cols="30" rows="10"></textarea><br>
+            <!--html5新增的元素-->
+            <label for="num">手机:</label>
+            <input type="tel" id="num" name="phoneNum"><br>
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="myEmail"><br>
+            <label>出生：</label>
+            <input type="date" name="birth"><br>
+            <!--按钮-->
+            <input type="submit" value="确认提交">&nbsp;&nbsp;
+            <input type="reset" value="重新填写">&nbsp;&nbsp;
+            <input type="button" value="普通按钮">&nbsp;&nbsp;
+        </fieldset>
+
+
+    </form>
+</body>
+</html>

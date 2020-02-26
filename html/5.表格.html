@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <!--
+     表格：table   tr  th  td  caption表格的标题
+     属性：border width  height  rowspan  colspan
+     cellpadding:内容与单元格边框之间的距离
+     cellspacing:单元格与单元格之间的距离
+
+   -->
+   <table border="1" width="500px" height="50%" align="center" cellpadding="10px" cellspacing="0">
+       <caption>学生成绩表</caption>
+       <!--优先加载并显示-->
+       <thead>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>课程</th>
+            <th>分数</th>
+            <th>备注</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr align="center">
+            <td>1</td>
+            <td>蒋彪</td>
+            <td>java</td>
+            <td>100</td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>段康</td>
+            <td>HTML</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>汪廷进</td>
+            <td>HTML</td>
+            <td>100</td>
+        </tr>
+       </tbody>
+       <tfoot>
+        <tr>
+            <td>总分：</td>
+            <td colspan="4"></td>
+        </tr>
+       </tfoot>
+   </table>
+</body>
+</html>
