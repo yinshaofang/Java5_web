@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 1400px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid blue;
+            position: relative;
+            left: 100px;
+            top: 50px;
+        }
+        section{
+            width: 1000px;
+            height: 4000px;
+            border: 1px solid red;
+            background-color: orange;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+            /*z-index调整绝对定位时重叠上下位置 默认为0 值越大层级越高*/
+            z-index: 10;
+            /*透明度 值在0-1*/
+            opacity: 0.4;
+        }
+        footer{
+            width: 1000px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: pink;
+            position: absolute;
+            left: 300px;
+            top:500px;
+            z-index:20;
+        }
+        aside{
+            width:40px;
+            height:40px;
+            border: 1px solid red;
+            position: fixed;
+            right: 10px;
+            bottom: 200px;
+        }
+        nav{
+            width: 400px;
+            height: 50px;
+            background-color: #fff;
+            position: absolute;
+            left:200px;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+     <!--定位：对元素的位置进行定位
+        1、四种类型：
+          1)静态定位：static  默认
+          2)相对定位  relative--相对于自身原来（0,0）位置进行偏移，没有脱离文档标准流  原来的位置还是存在的
+          3)绝对定位  absolute -- 如果有父级元素存在，相对于父级元素进行偏移，否则是相对于浏览器进行偏移
+          4)固定定位  fixed --相对于浏览器进行定位
+       2、偏移量  上下左右 （负值 相反方向）
+
+       3、父相子绝--父元素设置相对定位，子元素会设置绝对定位  是常见的组合定位
+     -->
+
+
+
+ <header>
+     <nav>导航</nav>
+ </header>
+ <section>
+     <aside>回到顶部</aside>
+ </section>
+ <footer>底部</footer>
+
+</body>
+</html>
