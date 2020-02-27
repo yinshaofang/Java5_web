@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section{
+            border: 5px dashed blue;
+            margin-top: 100px;
+            /*height: 800px;*/
+            overflow: hidden;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .d1{
+            float: right;
+            background-color: yellow;
+        }
+        .d2{
+            float: left;
+            background-color: pink;
+            height: 400px;
+        }
+        .d3{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        文档标准流：元素的排列从上往下，从左往右
+        1、解决块级元素并列两种方法
+         1)display:inline-block  行内块元素 不独占一行 可以设置宽高  ->局限：位置方向不可控制，中间有空格
+         2)浮动 left right none  ->脱离文档标准流 ->块级元素不能独占一行 ->局限：方向可控但是会造成父级边框塌陷
+       2、解决父框塌陷问题
+       方法：1、父级元素设置height  ->缺点：固定高度，扩展性差
+            2、溢出隐藏 overflow ->缺点：有下拉框的场合是不适合使用
+    -->
+   <section>
+       <div class="d1">div1</div>
+       <div class="d2">div2</div>
+       <div class="d3">div3</div>
+       <select>
+           <option>安徽</option>
+           <option>江苏</option>
+           <option>浙江</option>
+       </select>省
+   </section>
+</body>
+</html>
