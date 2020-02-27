@@ -5,21 +5,48 @@
     <title>Title</title>
     <style>
         /* 选择器{属性名：属性值;属性名:属性值;....}
-           1、标签选择器 p{}
+           1、标签选择器 标签名{属性名：属性值;...}
+           2、类选择器 .first{属性名：属性值;...}
+           3、id选择器 #two{属性名：属性值;...}
+           4、并集选择器 .three,.four{属性名:属性值;...}
+           5、复合选择器:标签选择器和其他选择器如id或class选择器的复合
+           6、嵌套选择器（后代选择器）：用在父子标签之间
+           7、通用选择器：*{属性名:属性值;...} 作用于所有的标签
 
+            优先级：浏览器默认样式<继承<通用选择器<标签选择器<class选择器<id选择器<行内样式
          */
+        #two{
+            color: aqua;
+            font-size: 100px;
+        }
+        .first{
+            color: red;
+            font-size:150px;
+        }
         p{
           font-size:50px;
           color: blue;
+        }
+        /*.four,.three,#two{*/
+            /*font-style: italic;*/
+            /*font-weight: bold;*/
+        /*}*/
+          p span{
+            font-size:150px;
+            color: bisque;
+        }
+        *{
+           color: yellow;
+           text-decoration: underline;
         }
     </style>
 
 </head>
 <body>
      <h2>静夜思</h2>
-     <p>窗前明月光</p>
-     <p>疑是地上霜</p>
-     <p>举头望明月</p>
-     <p>低头思故乡</p>
+     <p class="first">窗前明月光</p>
+     <p id="two" class="first" style="color: darkmagenta;">疑是地上霜</p>
+     <p class="three">举头望明月</p>
+     <p class="four">低头<span>思故乡</span></p>
 </body>
 </html>
