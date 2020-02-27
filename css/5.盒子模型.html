@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            /*1、宽高（实际）*/
+            width: 600px;
+            height: 600px;
+            /*2、边框:大小 样式 颜色  transparent透明*/
+            /*border: 2px solid red;*/
+            border-top: 20px solid yellow;
+            border-right: 10px dashed red;
+            border-bottom: 5px dotted green;
+            border-left: 3px double gold;
+            /*3、内边距 没有负值
+            一个值：上下左右 40px
+            两个值：上下：40px 左右20px
+            三个值：上40px 左右20px 下10px
+            四个值：上40px 右20px 下10px 左5px 呈顺时针
+            */
+            /*padding-top: 40px;*/
+            /*padding-right: 30px;*/
+            /*padding-bottom: 20px;*/
+            /*padding-left: 10px;*/
+            padding: 40px 20px 10px 5px;
+
+            /*4、margin外边距：指的盒子间距离，有负值（方向）
+             一个值：上下左右 40px
+            两个值：上下：40px 左右20px
+            三个值：上40px 左右20px 下10px
+            四个值：上40px 右20px 下10px 左50px 呈顺时针
+
+            外边距合并：合并后的外边距的高度等于两个发生合并的外边距的高度中较大者 取的是40px
+            */
+            margin: 40px 20px 10px -50px;
+            /*5、水平居中对齐条件：块元素 固定宽高*/
+            /*margin: 0 auto;*/
+
+            /*6、盒子尺寸 border-box:指的是实际宽高  content-box：默认*/
+            box-sizing: border-box;
+
+            /*7、圆角 css3新增*/
+            border-radius: 50%;
+            /*8、盒子阴影:内阴影 x轴偏移 y轴偏移 模糊半径 颜色*/
+            box-shadow: inset 10px 10px 50px orchid;
+        }
+    </style>
+</head>
+<body>
+    <div>我是一个div1</div>
+    <!--<div>我是一个div2</div>-->
+</body>
+</html>
