@@ -27,6 +27,15 @@
         .d3{
             float: right;
         }
+        /*.p1{*/
+          /*clear: both;*/
+        /*}*/
+
+        .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
     </style>
 </head>
 <body>
@@ -38,16 +47,14 @@
        2、解决父框塌陷问题
        方法：1、父级元素设置height  ->缺点：固定高度，扩展性差
             2、溢出隐藏 overflow ->缺点：有下拉框的场合是不适合使用
+            3、建一个空的块级元素 设置clear:both 来清除浮动  ->缺点：造成代码冗余
+            4、父级元素添加一个伪类after  ->最佳  替换第三种
     -->
-   <section>
+   <section class="clear">
        <div class="d1">div1</div>
        <div class="d2">div2</div>
        <div class="d3">div3</div>
-       <select>
-           <option>安徽</option>
-           <option>江苏</option>
-           <option>浙江</option>
-       </select>省
+       <!--<p class="p1"></p>-->
    </section>
 </body>
 </html>
